@@ -3,16 +3,24 @@
 #include<vector>
 using namespace std;
 int main(){
-   int array[]={1,2,3,4,3,2,6,7,5,2,4,5,4,6,7,9};
+   int array[]={1,2,2,3,4,5,6};
+   int arr[]={1,2,3,4,5,6};
    unordered_map<int,int>mp;
    vector<int>ans;
+   int t=1;
    for(int c:array){
     mp[c]++;
    } 
-   for(auto it:mp){
-    ans.push_back(it.first);
+   for(int x:arr){
+    mp[x]--;
    }
-   for(int i=0;i<ans.size();i++){
-    cout<<ans[i]<<" ";
+   for(auto it:mp){
+    if(it.second!=0){
+        cout<<"arry is not equal";
+        t=0;
+    }
+   }
+   if(t==1){
+    cout<<"arrays are equal";
    }
 }
