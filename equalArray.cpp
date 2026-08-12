@@ -7,7 +7,6 @@ int main(){
    int arr[]={1,2,3,4,5,6};
    unordered_map<int,int>mp;
    vector<int>ans;
-   int t=1;
    for(int c:array){
     mp[c]++;
    } 
@@ -17,10 +16,8 @@ int main(){
    for(auto it:mp){
     if(it.second!=0){
         cout<<"arry is not equal";
-        t=0;
+        return 0;
     }
    }
-   if(t==1){
     cout<<"arrays are equal";
-   }
 }
